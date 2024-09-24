@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Của Tôi</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: #e7d0d6;
+            margin: 0; 
+            font-family: "Times New Roman", serif;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: rgb(233, 226, 247);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .post {
+            margin-bottom: 20px;
+        }
+        .post img {
+            width: 600px;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto; 
+        }
+        .comments {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #efe8e8;
+        }
+        .comment {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+        form {
+            margin-top: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #efeeee;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #eee;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Blog Của Tôi</h1>
+    </header>
+
+    <div class="container">
+        <div class="post">
+            <h2>My Fav Music List.</h2>
+            <small>Ngày: 23/09/2024 | Tác giả: Vũ Quang Dũng</small>
+            <p>
+                Tôi thích nghe nhạc còn bạn thì sao?
+            </p>
+            <img src="https://w0.peakpx.com/wallpaper/653/712/HD-wallpaper-little-boy-listening-to-the-music-art-sky-headphones-night-bed.jpg" alt="Little Boy Listening to the Music">
+            <p>Lone Ranger - Rachel Platten</p>
+            <p>Firework - Katy Perry</p>
+            <p>Rumors - NEFFEX</p>
+            <p>Cold - NEFFEX</p>
+            <p>Careless - NEFFEX</p>
+            <p>Grateful - NEFFEX</p>
+            <p>Thunder - Gabry Ponte, LUM!X, Prezioso</p>
+            <p>Rendezvous - DEAMN</p>
+            <p>Remember Our Summer - FrogMonster</p>
+            <p>Oblivion - THEFATRAT</p>
+            <p>Seasons - Rival & Cadmium</p>
+            <p>Titanium - David Guetta</p>
+            <p>The Ocean - Mike Perry</p>
+            <div class="comments">
+                <h3>Bình luận</h3>
+                <div class="comment">
+                    <strong>Người Bình Luận 1:</strong>
+                    <blockquote>Đang buồn mà nghe mấy bài này vui hơn hẳn :))).</blockquote>
+                </div>
+                <div class="comment">
+                    <strong>Người Bình Luận 2:</strong>
+                    <blockquote>Có nhiều bài nghe quen mà không biết tên thx ông.</blockquote>
+                </div>
+                <form action="#" method="post">
+                    <input type="text" placeholder="Tên của bạn" required>
+                    <textarea placeholder="Nội dung bình luận" required></textarea>
+                    <button type="submit">Gửi Bình Luận</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="post">
+            <h2>Code xuyên đêm</h2>
+            <small>Ngày: 23/09/2024 | Tác giả: Vũ Quang Dũng</small>
+            <img src="https://genk.mediacdn.vn/2019/7/16/coder-at-night-15632687150171012266960.jpg" alt="CODE XUYÊN ĐÊM">
+            <p>Điểm danh ai đã từng nào :)))</p>
+            <div class="comments">
+                <h3>Bình luận</h3>
+                <div class="comment">
+                    <strong>Người Bình Luận 1:</strong>
+                    <blockquote>Đồng chí đây rồi :))</blockquote>
+                </div>
+                <form action="#" method="post">
+                    <input type="text" placeholder="Tên của bạn" required>
+                    <textarea placeholder="Nội dung bình luận" required></textarea>
+                    <button type="submit">Gửi Bình Luận</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<footer>
+</footer>
+
+</body>
+</html>
