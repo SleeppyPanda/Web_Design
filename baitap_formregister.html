@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container .container {
+            display: flex; /
+            background: #f0f0f0;
+            padding: 10px;
+            margin-top: 10px;
+            gap: 10px;
+            flex: 1; 
+        }
+        .image-column {
+            flex: 1;
+            background-size: cover;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .form-column {
+            flex: 1;
+            padding: 20px;
+        }
+        .form-column p {
+            font-size: 14px;
+            color: #555;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-column">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEhUSEBIVFRUVFRUQFRUVFRUVFxUVFRUWFxUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0eHSUtLS0tLS0tLS0tLS0tLS0tKy0tLSstLS0tLS0tLS0tLS0tLS0tLS0rNS0tLS0tNy0tLf/AABEIARMAtwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACAwABBAUGB//EADMQAAIBAgQEBAUEAQUAAAAAAAABAgMRBBIhMQVBUWETcYGRBiIyQrEUoeHwUgcVI2LR/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/EACoRAAICAgEEAgECBwAAAAAAAAABAhEDITESE0FRBAUicYEUFTJSYZGh/9oADAMBAAIRAxEAPwDw7BkrmicbXRTpGp1UZchWU0ShYrKUTQjKC4mjKU4jE0Z8paiOykUQJoS6ZWU0pFSiA+kVGhcB0zQroGSATSEeEU+g5xAaAh6Dp0oS0encRWw9ttUNSImFDfTJbRmdMF0zc6i6AOXYNkuEfZhcQbGqrDoKlEZjKNCWirDXEGwEA5SDqXRkJs1WO1Z62GFg9eYqthrbFQkNz3MqZ6txaOfKAOQ3TplQpXLTM3ExZAXA3VKPQS4FJ2S4mbKDlNTgC4DIcRFiOI3KU4gIS4lZR+UrKMloQ4gOJocQXEaIaEZSnEc4lZR0RQhoGxpqUmt015r8CnEKJYqQtxHuILiFEsQ0DYc4lKINEgQ0IbaSg1Z+j6EMmzqjjdaZ3FTDyj8hHTIs7aE5Aco/IX4YIKM+QVKBt8MCUCkxNGNwBcDU4FZCrJoy+GVkNWUrIMXSZMhTga1SBdFhZLiZHAHIa5UgPDHZDizM4AuB1qNC8WmtzHVw9tgUkEsTStE4fiMryys4PRp6r2NHGOExjHxaOsPuju4X5rrH8GGUD0HAa8ZrJU1WsPNNWsxS1tGaV6Z5RxAlE347C+HUnB/bJx9E9H7WMriaGLRncQWh7iLcQM2gEQuSIKilOj2nhk8M1+GVkOSz2aMnhlqmanAHIOxGfIA4GvIDKAwMUoAOBscAJQKshoyZSsppcAHAaYhFgswbiC4j0xC5aimh7QLRQmPhJZdehhqvoNk2LaEo0KctGdo7Hw7TvJabP+3Oa4nf+H3GnGVSWyTb8gm9GUVs4/xKl+pqW6x98kTlSRtxVV1Jym95Ny92Z3E0jwYy2zNKIDiaZIBwGZNGZwINlEgEUe/8MnhmrITIcFnumTwwXTNrgC6YWFGFwBcTZKmLlApMVGRxAcDW4AuA7FRjcAHA1uIDiOyWjI4C3E2TgKlApMlozOIDiaJRAaLTJM8ogOI9xBcSiWhMYXeug/FYnNFQjpBe8n1f/gtxBcQM2jO4gtGhxFuJSZk0IcQJIfJC2hmbESRA3EsZB9GsSw2xTieae0KsU0NcSsoDEuIuUTQ0A0OxGaURc1Y1OJlqU5ptqen+OVN37NW/vMqwYmpJJXs35K5WV8x1FNq7jlV3aL3Wu7s7a76CazqZkoxVr6yflfSPPpe/oxkgNASRonEU0NMTRnnEXKJokgLFWQ0InTsLym9xTRkqFKQmqEtANDWLZaZDFtC5DZC5IoykKcQHEcwJIdmTQlogTIOzM+lZSnEdlKynmnsCMpMo5xKaCwsQ4gOI9xBcR2OzO4gOJocRbiFjESiKkjS0Kkh2BmkhUkaZoVKJaZJmkgGh8oi5IZLQlipofJCpIpMiSESQtodJCpItMyYuQDQxgtFozaFMFoYwGUZtCmiy2iAZ0fT3ErKNsU0ebZ7HSKsDYa0C0FhQtoCURrQLQ7FQlxAcR8kA0AGeURckaJIVJDsZmkhUkaZoVIpMDNJC5IfJCpIpMQiSFSQ+QqaKshoRJCpIfJAZepSZk0ZpAM1zoLqJqUrLVO5akZuLESBYbQLRdmTQtohbRAsmj6o0C0NsC0eXZ7NCrAtDWgWgsKFNAtDWgGgsVCmgZIf4bexJUUt37D6hdJkkhcka/wBO3smaqPDW97ApieNnG8NvZN+SGLhdVq9vdnpKeCtzDVJIq5egqPs8nPhdToA+EVD2X6dPcGVBD/IVxZ4rFcJqRTaW390AwHCpVH82iPa1acbGXbZCeRrQ1BMzYLg1CGuVSfVmivgaT+1eyDzyewLpX0a/cjrK6TiYqlRjtlOZjadGzlFrN2d/2Z6efB6clZ3/ACcvF/DdP7X6Ns0jJeTNxfg8pNRb5fgGrhHa6g/NJ2PRYbg0VNXbst00rX63K4vWo2y/VbRJKS9zVZN0jJ4tbPIuPmQ04urf6dO38kN1I5ZRSZ9PcO4DQxxBaPNZ6yAaBaGNAk2ULkgcnW47TqasNh76sqNvRMmltgUsOnHRFQwtujOj4YMoqO5q8ZisvozxwzGRoeYE8VFbGWeMb6+hNwiOpyOj4YqrNR6s5LxtXkr/AJDw+NlIHkVDWN+ToxrJ8gZy7lUorcbOimPbQtJmTM76aodGK3sV+ntzCl5kpNclNp8FfL3EV8RGCuw3NK+qMNaN9Zq9ul2JyKUTRTxGfZicVh3LaUmuaVkv3Kzvlp2sNhGT3bJ6h0LhTyq38nPx/DaU2pW177eqR1svTUDJJ8kgUmgcU0eUxPAJS2UbezIenWHbf1FlrNIzeGBsKaDcQSWWmA0DbqMbYtshloOOVa6jf1L5K5lbKc2CnQOFjqmLk9L28hUoaNuTfqJbKdZoXW3yPoS4AnT/AOwiSkth9Su2tTK3diTHRPE9H06hUXrq9e+w2pPItHF9nuZamIzKzsirFR16eIstZJFTxtna69DzzrNdH56i5VXJrdvtvYpJ+yG16OzV4so7u/bcRV41LLpD3GxowslGi33krfkt4alH7GvJpi6orkfS3wYcPUrz+aLdt3bUeo1r6N+b0/ZnSw2JjBWUbDXWv0JeSL4DokuQcPSja0nr3Kr1Mu4aqLnYknGSF1Kh+RVDGRkrJeoNbE62ukSlg0thywi53bHbYfijPeW6kvYhq/TR6FiqQ+qJqrUJREs01pTe5nkjaaXgwg3WwGA0NRU6hmzRMTlYqQyUhTMmzWIMmLkw5CpMmy6FyYpysOsnu7AWiu47CjPUkJbOqsHKok2kkaqPDKf3GkbZlJpHnoUJSdoq/kdTBcMcPmk9en8nYhh4R+lJC6sbjm3RCavRirTENt8zY8Ow4YXscjhOTOhZIpGGFIcoM2eFYCVNF9poXdsXTosKVN8hkKcVrdiqlaC0bL6UkRbbKbmluv76jKam19SfkJyqX0tetzNDC1ISzeNaP+KV/wAjT9jaOh83chnq8Yp093cgdcPbF25/2nYqVLrRmaTCkLZ0TlZhGNAyFthyFyZhJmqAkwGy5MXJmTZtFFSYqTCbKS6onqNKFX16mvC03q8u4CxajtFFw4m/IpNeSJKT4Rvpt22YTn2MtPFN7ag1asudvcvuKjHtu9mp4pLdoyVeKwTtZ+wCpc2kLniFG1ye6y1ij4HriafUbGvcGUE1uU6VthOchVEepdxFaqlzM+IrSS0Rx8VWrLUzea9I1x4L2dmWK7mWtUvuzzeI4hURjlxOp1Dtzl5NlGMT1axmXmYcdxdW+q5xaeLlLcRiMLN6oaxK/wAmU65iheMx2bmWc2vRktyztjGNHFPJOz7OpKWzT8iSgrb/ALHwrhvxXiKElOFR7SWV3ypvm1zV7vr3Ojh/j7FZ3UnNtyUY2UmopRcvt2v83S9ki3jyeVZwr5WFvUq/U+uyEzZ4/hXx9Tm4xqtJatze69P7+x6DBcdwlZXjVVt1fS/lfU5Jp+VR2RcXw7/Q2XG0qUHu7eZlrY3DwhGrOooQlZKUna7lsrMfiKsEm20klmbutur7Gf8ATtlt3pBvA+q6oKWFhaz0YuFRLZy9xFZ32v53IeWCWkNKTfI6OEpXs7+4yWDprZMwTrxWl37i44qHOTJ76qqL7U3u2bpU4r7n6mWolf6l+CQqRl9MvcVWoy9DNzfguMae2dGnOFtk/J3GeFTfJX7nHjNR01Rrp4mPU0jm9oieFrg2OkunsBWvyvYunWfPYbUqqxbpp7MtpmGU1Ey4mcXuIxcryaum1q1fVIxVabOVfkd0Ma5Kr0IS5Gf/AGdNnSw17cn+Q5PXVWNFOS0jR0Y8PweMe5rnhraG/DwVtAp0TOTlLbMu7To8/iOFxnyId2LXNJlDWWa8jc/8HwFMlwEwj6s+FDUh9DFyg7x0dmr+e5lCuJpPkcZOO0ba3EKlSMY1JOSjfLd3te11+y9gnxKpos8sqTio3bSi+Xf+DAmS5Pbj6L72Tm2d3EfE+KqU1CVSXypq6k4uV1b5rb6GfE8Zr1IpSqT0sk87Wzb1S0b2130OXcu5Kw41wkVL5OWXMma6ePrRbcas02st80rtdNz1vwt8TxdqOI0SilCWrbtpaXNtnhi1IjN8eGWNNGnxvmZcE+qL/Y+rYbiVKpUyQzrRPM1aOt9N78mdJYhQzPxF8v1Wknbbdeq9z5HR4lUgrRdtVr1S5eW/uU+JVc05qTTqXzW53OCX1jb09HsL7uNbjbPpuP8AiujGE3CHiTino707NWunfXS9/QzcF+MaEqdPxpxjVk2pJKSikno23srd/wCPmLm3fV679/Mq5vH67Go1/wBOKX2+XqtLXrwfQOIf6jTz2ox/4lmik3Zy6Tvb5ey12OLL4oxNSnKMq2VtxvZPWKvor7cvY8xctSN18TEvBzP5+Z+df6PQcN4pGlOo223N2zZuUmnz20b8rEfHa2eTVSo46Rbcvpupbd78+duR55slxv48G7aBfOypJJ0ke6l8X1YqEKUVKT3lJJyab0bS0T0fM6K+L8jhCtSbcoxTa0ebM4ybv36fwfOP1M/8nso+iTVvZv3GVcbKWXNrlSXfe716t8zB/Bx+jqX2uTbb2fUsB8V4aSUnJ0020s3be9tn2O9hONUqivCcZx1V11W58UxGM0UVZrM2/J7rbzKw2OUJNpNa3Vnttey9NzL+AXKtG/8ANLdSSZ9xeJoz+5J+ZR8qwnxXWjC80qspNpp6NZUtb9+nYhzy+BKzqh9hhrlr9meSLuCQ9w+YDLuAXcACuXcEgAFclwS7gARLg3LAC7kuDclwAK5AbkACyFXIAFkuUUAF3IUVcALuQq5VwAOM2tUUAQVIabXBRCEGBZCiAIIu4JAAIsElwAIlwblgBZYJYAQhVyXACyFEuAFlEuVcAJchCgAhCFABCEIAyEIQAIQhAAhZCABCEIAiyEIAEIQgAQhCABCEIAEKIQAIQhAGUQhAAhCEAD//2Q==" alt="Cloudy Sky" style="width:100%; height:auto;">
+        </div>
+        <div class="form-column">
+            <p><strong>This is not a real online service! You need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</strong></p>
+            <p><strong>You know you want to.</strong></p>
+            <p><strong>Let's do it.</strong></p>
+            <form action="/submit-your-form" method="post">
+                <div class="form-column">
+                    <input type="text" name="first-name" placeholder="FIRST NAME" required>
+                    <input type="text" name="last-name" placeholder="LAST NAME" required>
+                    <input type="email" name="email" placeholder="EMAIL" required>
+                    <input type="tel" name="phone-number" placeholder="PHONE NUMBER" required>
+                    <input type="password" name="password" placeholder="PASSWORD" required>
+                    <input type="password" name="confirm-password" placeholder="CONFIRM PASSWORD" required>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+            <div class="footer">
+                <p><strong>Already have an account? <a href="/login">Log in</a></strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
